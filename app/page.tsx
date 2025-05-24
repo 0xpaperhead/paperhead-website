@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -12,7 +13,6 @@ import {
   Code,
   Zap,
   Users,
-  DollarSign,
   Search,
   Grid,
   List,
@@ -20,13 +20,17 @@ import {
   Github,
   Globe,
 } from "lucide-react"
+import { Project } from "@/types/types"
+
+import paperhead from "@/app/_assets/logo.png"
+
+import '@jup-ag/terminal/css'
 
 export default function PaperheadWebsite() {
   const [matrixChars, setMatrixChars] = useState<string[]>([])
   const [activeTab, setActiveTab] = useState("home")
   const [projectsView, setProjectsView] = useState<"cards" | "table">("cards")
   const [searchQuery, setSearchQuery] = useState("")
-
   useEffect(() => {
     // Generate random matrix characters
     const chars = "PAPERHEAD01$SOLDEFI".split("")
@@ -41,7 +45,7 @@ export default function PaperheadWebsite() {
   }, [])
 
   // Mock projects data structure - will be populated as projects are built
-  const projects = [
+  const projects: Project[] = [
     // Example structure for future projects:
     // {
     //   id: 1,
@@ -55,6 +59,31 @@ export default function PaperheadWebsite() {
     //   paperheadIntegration: "Enhanced odds for holders"
     // }
   ]
+
+  // Initialize Jupiter Terminal only when on home page
+  useEffect(() => {
+    if (typeof window !== "undefined" && activeTab === "home") {
+      // Small delay to ensure the DOM has updated
+      const timer = setTimeout(() => {
+        const terminalElement = document.getElementById("integrated-terminal");
+        if (terminalElement) {
+          import("@jup-ag/terminal").then((mod) => {
+            const init = mod.init;
+            init({
+              displayMode: "integrated",  
+              integratedTargetId: "integrated-terminal",
+              formProps: {
+                initialInputMint: "So11111111111111111111111111111111111111112",
+                initialOutputMint: "2AtFgHT5LDuZ2AUqGUNBGQh2XiKJQTEyiG2w2BqLpump",
+              },
+            });
+          });
+        }
+      }, 100);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [activeTab]);
 
   const filteredProjects = projects.filter(
     (project) =>
@@ -92,21 +121,19 @@ export default function PaperheadWebsite() {
             <div className="flex gap-4">
               <button
                 onClick={() => setActiveTab("home")}
-                className={`px-4 py-2 font-mono transition-colors ${
-                  activeTab === "home"
-                    ? "text-green-400 border-b-2 border-green-400"
-                    : "text-green-600 hover:text-green-400"
-                }`}
+                className={`px-4 py-2 font-mono transition-colors ${activeTab === "home"
+                  ? "text-green-400 border-b-2 border-green-400"
+                  : "text-green-600 hover:text-green-400"
+                  }`}
               >
                 HOME
               </button>
               <button
                 onClick={() => setActiveTab("projects")}
-                className={`px-4 py-2 font-mono transition-colors ${
-                  activeTab === "projects"
-                    ? "text-green-400 border-b-2 border-green-400"
-                    : "text-green-600 hover:text-green-400"
-                }`}
+                className={`px-4 py-2 font-mono transition-colors ${activeTab === "projects"
+                  ? "text-green-400 border-b-2 border-green-400"
+                  : "text-green-600 hover:text-green-400"
+                  }`}
               >
                 PROJECTS
               </button>
@@ -146,40 +173,38 @@ export default function PaperheadWebsite() {
           {/* Hero Section */}
           <section className="relative z-10 container mx-auto px-4 py-20 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 glitch-text">PAPERHEAD</h1>
-              <div className="text-xl md:text-2xl mb-8 text-green-300">
+              <Image
+                src={paperhead.src}
+                alt="Paperhead"
+                width={150}
+                height={150}
+                className="mx-auto rounded-lg"
+              />
+              <div className="text-xl md:text-2xl mb-8 mt-2 text-green-300">
                 {"> BRIDGING LIVE STREAMING & DEFI ON SOLANA"}
               </div>
               <p className="text-lg mb-12 text-green-200 max-w-2xl mx-auto">
-                Watch DeFi projects being built live. Experience transparency through code. Join the revolution of
-                AI-powered "vibe coding" in real-time.
+                Watch DeFi projects being built transparently live. Join Paperhead for "vibe coding" in real-time.
               </p>
+              
+              {/* Jupiter Terminal */}
+              <div className="flex justify-center mb-8">
+                <div className="bg-black/80 border border-green-500 rounded-lg p-4">
+                  <div className="text-green-400 text-sm mb-2 text-center font-mono">{"> SWAP_TERMINAL_ACTIVE"}</div>
+                  <div id="integrated-terminal" style={{ width: "400px", height: "568px" }}></div>
+                </div>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-green-500 text-black hover:bg-green-400 font-bold" asChild>
                   <a
-                    href="https://pump.fun/coin/2AtFgHT5LDuZ2AUqGUNBGQh2XiKJQTEyiG2w2BqLpump"
+                    href="https://x.com/SourenKhetcho"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <Play className="w-5 h-5 mr-2" />
                     WATCH LIVE STREAMS
                   </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black"
-
-                >
-                 <a
-                    href="https://pump.fun/coin/2AtFgHT5LDuZ2AUqGUNBGQh2XiKJQTEyiG2w2BqLpump"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                   
-                  
-                  <DollarSign className="w-5 h-5 mr-2" />
-                  GET $PAPERHEAD
                 </Button>
               </div>
             </div>
@@ -190,14 +215,14 @@ export default function PaperheadWebsite() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="bg-black/80 border-green-500">
                 <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">1B</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">1B $PAPERHEAD</div>
                   <div className="text-green-300">Total Supply</div>
                 </CardContent>
               </Card>
               <Card className="bg-black/80 border-green-500">
                 <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">0.05%</div>
-                  <div className="text-green-300">Creator Rewards</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">A lot</div>
+                  <div className="text-green-300"># of projects</div>
                 </CardContent>
               </Card>
               <Card className="bg-black/80 border-green-500">
@@ -463,7 +488,7 @@ export default function PaperheadWebsite() {
                   </p>
                   <Button className="bg-green-500 text-black hover:bg-green-400" asChild>
                     <a
-                      href="https://pump.fun/coin/2AtFgHT5LDuZ2AUqGUNBGQh2XiKJQTEyiG2w2BqLpump"
+                      href="https://x.com/SourenKhetcho"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -511,10 +536,6 @@ export default function PaperheadWebsite() {
                               </Badge>
                             ))}
                           </div>
-                        </div>
-                        <div>
-                          <h4 className="text-green-400 font-semibold mb-2">$PAPERHEAD Integration</h4>
-                          <p className="text-green-200 text-sm">{project.paperheadIntegration}</p>
                         </div>
                         <div className="flex gap-2">
                           {project.liveUrl && (
