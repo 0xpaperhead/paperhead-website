@@ -70,7 +70,7 @@ export default function PaperheadWebsite() {
           import("@jup-ag/terminal").then((mod) => {
             const init = mod.init;
             init({
-              displayMode: "integrated",  
+              displayMode: "integrated",
               integratedTargetId: "integrated-terminal",
               formProps: {
                 initialInputMint: "So11111111111111111111111111111111111111112",
@@ -80,7 +80,7 @@ export default function PaperheadWebsite() {
           });
         }
       }, 100);
-      
+
       return () => clearTimeout(timer);
     }
   }, [activeTab]);
@@ -116,7 +116,11 @@ export default function PaperheadWebsite() {
       {/* Navigation */}
       <nav className="relative z-10 border-b border-green-900 bg-black/90 backdrop-blur">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-green-400 glitch-text">PAPERHEAD</div>
+
+          <div className="text-2xl font-bold text-green-400 glitch-text cursor-pointer" onClick={() => setActiveTab("home")}>
+            PAPERHEAD
+          </div>
+
           <div className="flex items-center gap-6">
             <div className="flex gap-4">
               <button
@@ -186,7 +190,7 @@ export default function PaperheadWebsite() {
               <p className="text-lg mb-12 text-green-200 max-w-2xl mx-auto">
                 Watch DeFi projects being built transparently live. Join Paperhead for "vibe coding" in real-time.
               </p>
-              
+
               {/* Jupiter Terminal */}
               <div className="flex justify-center mb-8">
                 <div className="bg-black/80 border border-green-500 rounded-lg p-4">
@@ -194,7 +198,7 @@ export default function PaperheadWebsite() {
                   <div id="integrated-terminal" style={{ width: "400px", height: "568px" }}></div>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-green-500 text-black hover:bg-green-400 font-bold" asChild>
                   <a
