@@ -383,7 +383,7 @@ export default function PaperheadWebsite() {
                 </CardHeader>
                 <CardContent className="text-green-200">
                   <ul className="space-y-2">
-                    <li>• Launch paperhead.io website</li>
+                    <li>• Launch paperhead.io website  ✓</li>
                     <li>• Release community Telegram group</li>
                     <li>• Deploy first DeFi project with $PAPERHEAD integration</li>
                   </ul>
@@ -399,7 +399,6 @@ export default function PaperheadWebsite() {
                 </CardHeader>
                 <CardContent className="text-green-200">
                   <ul className="space-y-2">
-                    <li>• Implement staking and yield farming</li>
                     <li>• Additional DeFi project releases</li>
                     <li>• Enhanced token utility features</li>
                   </ul>
