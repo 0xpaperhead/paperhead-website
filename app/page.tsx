@@ -336,7 +336,7 @@ export default function PaperheadWebsite() {
                         <li>• Symbol: $PAPERHEAD</li>
                         <li>• Total Supply: 1,000,000,000</li>
                         <li>• Blockchain: Solana</li>
-                        <li>• Creator Holdings: 3.5M tokens</li>
+                        <li>• Creator Holdings: 7.98M tokens</li>
                       </ul>
                     </div>
                     <div>
