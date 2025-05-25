@@ -400,7 +400,7 @@ export default function PaperheadWebsite() {
                 <CardContent className="text-green-200">
                   <ul className="space-y-2">
                     <li>• Additional DeFi project releases</li>
-                    <li>• Enhanced token utility features</li>
+                    <li>• Enhanced token utility features such as project yield earnings</li>
                   </ul>
                 </CardContent>
               </Card>
