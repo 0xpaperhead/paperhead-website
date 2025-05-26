@@ -162,7 +162,7 @@ export default function PaperheadWebsite() {
                 className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black"
                 asChild
               >
-                <a href="https://x.com/sourenkhetcho" target="_blank" rel="noreferrer">
+                <a href="https://x.com/0xpaperhead" target="_blank" rel="noreferrer">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   TWITTER
                 </a>
@@ -202,7 +202,7 @@ export default function PaperheadWebsite() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-green-500 text-black hover:bg-green-400 font-bold" asChild>
                   <a
-                    href="https://x.com/SourenKhetcho"
+                    href="https://x.com/0xpaperhead"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -491,7 +491,7 @@ export default function PaperheadWebsite() {
                   </p>
                   <Button className="bg-green-500 text-black hover:bg-green-400" asChild>
                     <a
-                      href="https://x.com/SourenKhetcho"
+                      href="https://x.com/0xpaperhead"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -672,7 +672,7 @@ export default function PaperheadWebsite() {
               PUMP.FUN
             </a>
             <a
-              href="https://x.com/sourenkhetcho"
+              href="https://x.com/0xpaperhead"
               target="_blank"
               className="text-green-400 hover:text-green-300 transition-colors"
               rel="noreferrer"
