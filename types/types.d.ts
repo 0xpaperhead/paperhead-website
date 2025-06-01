@@ -5,6 +5,7 @@ export type Project = {
   status: string;
   technology: string[];
   streamDate: string;
-  liveUrl: string;
-  githubUrl: string;
+  liveUrl: string | null;
+  githubUrl: string | null;
+  paperheadIntegration?: string;
 };
