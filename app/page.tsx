@@ -170,6 +170,16 @@ export default function PaperheadWebsite() {
                   TWITTER
                 </a>
               </Button>
+              <Button
+                variant="outline"
+                className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black"
+                asChild
+              >
+                <a href="https://github.com/0xpaperhead/paperhead-whitepaper" target="_blank" rel="noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  WHITEPAPER
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -212,6 +222,16 @@ export default function PaperheadWebsite() {
                   >
                     <Play className="w-5 h-5 mr-2" />
                     WATCH AI DEVELOPMENT
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-black font-bold" asChild>
+                  <a
+                    href="https://github.com/0xpaperhead/paperhead-whitepaper"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <ExternalLink className="w-5 h-5 mr-2" />
+                    READ WHITEPAPER
                   </a>
                 </Button>
               </div>
@@ -627,6 +647,14 @@ export default function PaperheadWebsite() {
               rel="noreferrer"
             >
               TWITTER/X
+            </a>
+            <a
+              href="https://github.com/0xpaperhead/paperhead-whitepaper"
+              target="_blank"
+              className="text-green-400 hover:text-green-300 transition-colors"
+              rel="noreferrer"
+            >
+              WHITEPAPER
             </a>
           </div>
           <div className="text-green-600 text-sm">
