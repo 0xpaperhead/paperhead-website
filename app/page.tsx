@@ -389,6 +389,33 @@ export default function PaperheadWebsite() {
           <section className="relative z-10 container mx-auto px-4 py-16">
             <h2 className="text-4xl font-bold text-center mb-12 text-green-400">{"> EXECUTION_ROADMAP"}</h2>
             <div className="max-w-4xl mx-auto space-y-8">
+              
+              {/* Technical Progress Note */}
+              <Card className="bg-black/80 border-cyan-500">
+                <CardHeader>
+                  <CardTitle className="text-cyan-400 text-xl">{"> TECHNICAL_WORKDOC_ACTIVE"}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-green-200">
+                  <p className="mb-3">
+                    For detailed technical tasks and bi-weekly progress updates, see Paperhead's{" "}
+                    <a 
+                      href="https://github.com/0xpaperhead/paperhead-trading-agent/blob/main/technical-workdoc.md" 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="text-cyan-400 hover:text-cyan-300 underline"
+                    >
+                      Technical Workdoc
+                    </a>
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Tasks organized around live streaming sessions</li>
+                    <li>• Real-time progress tracking and transparency</li>
+                    <li>• Granular completion targets updated frequently</li>
+                    <li>• Community can watch development happen live</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
               <Card className="bg-black/80 border-green-500">
                 <CardHeader>
                   <div className="flex items-center gap-3">
@@ -416,11 +443,19 @@ export default function PaperheadWebsite() {
                 </CardHeader>
                 <CardContent className="text-green-200">
                   <ul className="space-y-2">
-                    <li>• Release initial public repository for AI Trading Agent</li>
+                    <li>• Release initial public repository for AI Trading Agent ✓</li>
                     <li>• Integrate automated trading capabilities (swaps)</li>
                     <li>• Implement AI engine for buy/sell signals</li>
+                    <li>• Publish agent on agent.paperhead.io (next stream)</li>
+                    <li>• Implement $PAPERHEAD token integration for access</li>
+                    <li>• Deploy shared-custodial user pools with encryption</li>
+                    <li>• Add real-time performance tracking and reporting</li>
                     <li>• Announce public launch of trading agent</li>
                   </ul>
+                  <div className="mt-4 p-3 bg-yellow-900/30 border border-yellow-600 rounded">
+                    <div className="text-yellow-400 text-sm font-mono mb-1">{"> DEVELOPMENT_METHOD"}</div>
+                    <div className="text-sm">Built using AI coding tools ("vibe coding") live on stream</div>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -467,13 +502,22 @@ export default function PaperheadWebsite() {
               <CardContent className="text-green-200 text-lg leading-relaxed">
                 <p className="mb-6">
                   Paperhead pioneers a revolutionary approach to AI development in crypto by building an AI trading agent 
-                  live on stream using AI coding tools. We showcase the transformative potential of "vibe coding"—a dynamic, 
-                  intuitive method of building software with AI assistance.
+                  live on stream using AI coding tools—showcasing the transformative potential of "vibe coding." This dynamic, 
+                  intuitive method of building software with AI assistance represents the future of development, where Paperhead 
+                  uses AI to build AI.
+                </p>
+                <p className="mb-6">
+                  Through Paperhead's live streams, viewers witness these AI tools in action as Paperhead develops the Paperhead AI trading agent 
+                  from scratch in real-time. This demonstrates the power and efficiency of AI-assisted coding while serving as 
+                  an engaging platform to see practical applications unfold. Whether you're a developer eager to master these 
+                  tools or an enthusiast curious about the next wave of technology, these streams offer a front-row seat to the 
+                  evolution of coding.
                 </p>
                 <p>
-                  Through transparent development and real utility via $PAPERHEAD token access to our AI trading agent, 
-                  we're creating authentic value while demonstrating the future of AI-powered software development. 
-                  This isn't just content—it's the evolution of how we build and interact with AI systems.
+                  Through transparent development and real utility via $PAPERHEAD token access to Paperhead AI trading agent, 
+                  Paperhead is creating authentic value while demonstrating the future of AI-powered software development. 
+                  This isn't just content—it's the evolution of how we build and interact with AI systems, making development 
+                  more accessible, efficient, and attuned to tomorrow's creators.
                 </p>
               </CardContent>
             </Card>
@@ -508,6 +552,17 @@ export default function PaperheadWebsite() {
                 <p className="text-green-300 text-sm mt-4">
                   $PAPERHEAD tokens required for access • Enhanced features for larger holders
                 </p>
+                <div className="mt-4 text-sm text-cyan-400">
+                  📋 Track live development progress in Paperhead's{" "}
+                  <a 
+                    href="https://github.com/0xpaperhead/paperhead-trading-agent/blob/main/technical-workdoc.md" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="underline hover:text-cyan-300"
+                  >
+                    Technical Workdoc
+                  </a>
+                </div>
               </CardContent>
             </Card>
 
@@ -586,20 +641,32 @@ export default function PaperheadWebsite() {
                     <div className="space-y-2 text-green-200">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
-                        <span>Q3 2025: Public repository release</span>
+                        <span>Q3 2025: Public repository release ✓</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
-                        <span>Q3 2025: Trading capabilities integration</span>
+                        <span>Next Stream: Deploy to agent.paperhead.io</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>Next Stream: Complete chart with real data tracking</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>Upcoming: $PAPERHEAD token integration</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>Upcoming: Shared-custodial user pools</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
                         <span>Q3 2025: AI engine implementation</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>Q3 2025: Deploy to agent.paperhead.io</span>
-                      </div>
+                    </div>
+                    <div className="mt-3 p-2 bg-blue-900/30 border border-blue-600 rounded text-xs">
+                      <span className="text-blue-400 font-mono">{"> LIVE_DEVELOPMENT: "}</span>
+                      <span className="text-blue-200">Watch tasks completed in real-time on stream</span>
                     </div>
                   </div>
 
