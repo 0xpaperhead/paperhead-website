@@ -205,6 +205,13 @@ export default function PaperheadWebsite() {
                 Join Paperhead for "vibe coding" and gain exclusive access with $PAPERHEAD tokens.
               </p>
 
+              {/* Coming Soon Announcement */}
+              <div className="bg-black/60 border border-green-500 rounded-lg p-4 mb-8 max-w-md mx-auto">
+                <div className="text-green-400 text-sm font-mono text-center">
+                  🚀 Coming Soon: <span className="text-green-300">agent.paperhead.io</span>
+                </div>
+              </div>
+
               {/* Jupiter Terminal */}
               <div className="flex justify-center mb-8">
                 <div className="bg-black/80 border border-green-500 rounded-lg p-4">
@@ -485,6 +492,25 @@ export default function PaperheadWebsite() {
               Gain exclusive access with $PAPERHEAD tokens.
             </p>
 
+            {/* Coming Soon Banner */}
+            <Card className="bg-gradient-to-r from-green-900/50 to-blue-900/50 border-green-400 mb-8">
+              <CardContent className="p-6 text-center">
+                <div className="text-green-400 text-sm font-mono mb-2">{"> AGENT_DEPLOYMENT_SCHEDULED"}</div>
+                <h3 className="text-2xl font-bold text-green-300 mb-2">Coming Soon</h3>
+                <p className="text-green-200 mb-4">
+                  The Paperhead AI Trading Agent will be deployed at:
+                </p>
+                <div className="bg-black/60 border border-green-500 rounded-lg p-4 inline-block">
+                  <div className="text-green-400 font-mono text-lg">
+                    🤖 agent.paperhead.io
+                  </div>
+                </div>
+                <p className="text-green-300 text-sm mt-4">
+                  $PAPERHEAD tokens required for access • Enhanced features for larger holders
+                </p>
+              </CardContent>
+            </Card>
+
             {/* Agent Features */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <Card className="bg-black/80 border-green-500">
@@ -551,6 +577,7 @@ export default function PaperheadWebsite() {
                       <li>• Enhanced features for larger holders</li>
                       <li>• Potential yield sharing from performance fees</li>
                       <li>• Built transparently live on stream</li>
+                      <li>• Accessible at <span className="text-green-400 font-mono">agent.paperhead.io</span> (coming soon)</li>
                     </ul>
                   </div>
 
@@ -571,7 +598,7 @@ export default function PaperheadWebsite() {
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
-                        <span>Q3 2025: Public launch announcement</span>
+                        <span>Q3 2025: Deploy to agent.paperhead.io</span>
                       </div>
                     </div>
                   </div>
@@ -590,6 +617,10 @@ export default function PaperheadWebsite() {
                     <Button variant="outline" className="border-green-500 text-green-400" onClick={() => window.open("https://github.com/0xpaperhead/paperhead-trading-agent", "_blank")}>
                       <Github className="w-4 h-4 mr-2" />
                       Repository
+                    </Button>
+                    <Button variant="outline" className="border-blue-500 text-blue-400" disabled>
+                      <Globe className="w-4 h-4 mr-2" />
+                      agent.paperhead.io (Coming Soon)
                     </Button>
                   </div>
                 </div>
