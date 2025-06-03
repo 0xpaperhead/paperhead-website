@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'Paperhead',
-  description: 'Paperhead | build defi project live on stream',
+  description: 'Paperhead | AI Trading Agent',
   generator: 'Paperhead',
   icons: {
     icon: '/favicon.ico',
